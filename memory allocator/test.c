@@ -58,6 +58,8 @@ void test_MemoryAllocator_free()
 	{
 		printf("MemoryAllocator_free failed\n");
 	}
+	MemoryAllocator_release(allocator);
+	free(myHeap);
 }
 void test_MemoryAllocator_optimizee()
 {
@@ -82,4 +84,6 @@ void test_MemoryAllocator_optimizee()
 	{
 		printf("MemoryAllocator_optimizee failed\n");
 	}
+	MemoryAllocator_release(allocator);
+	free(myHeap);
 }
